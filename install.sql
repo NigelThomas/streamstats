@@ -11,10 +11,10 @@ CREATE or replace FUNCTION streamstats
 (  c cursor
 )
 returns table
-( ROWTIME timestamp
-, rowcount int
-, bounds int
-, timeouts int
+( ROWTIME timestamp not null
+, rowcount bigint
+, bounds bigint
+, timeouts bigint
 )
     language java
     parameter style system defined java
